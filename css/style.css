@@ -4,7 +4,7 @@ body{
     
 }
 
-.container{
+.myclass{
     margin-top: 0px;
     margin-bottom: 0px;
     margin: auto;
@@ -111,8 +111,7 @@ body{
 
 
    #a{
-    font-family: 'Lobster Two', cursive;
-
+    font-weight: bolder;
     width: 100px;
     height: 100px;
    text-align: center;
@@ -127,8 +126,7 @@ body{
     animation-iteration-count: infinite;
    }
    #n{
-    font-family: 'Lobster Two', cursive;
-
+    font-weight: bolder;
     width: 100px;
     height: 100px;
     font-size: 75px;
@@ -143,8 +141,7 @@ body{
     animation-iteration-count: infinite;
    }
    #i{
-    font-family: 'Lobster Two', cursive;
-
+    font-weight: bolder;
     width: 100px;
     height: 100px;
    text-align: center;
@@ -159,8 +156,7 @@ body{
     animation-iteration-count: infinite;
    }
    #m{
-    font-family: 'Lobster Two', cursive;
-
+    font-weight: bolder;
     width: 100px;
     height: 100px;
     font-size: 75px;
@@ -175,8 +171,7 @@ body{
     animation-iteration-count: infinite;
    }
    #e{
-    font-family: 'Lobster Two', cursive;
-
+    font-weight: bolder;
     width: 100px;
     height: 100px;
     font-size: 75px;
@@ -218,4 +213,22 @@ body{
         opacity: 1;
       }
   }
-  
+  .navbar-brand {
+    float: left;
+    height: 50px;
+    padding: 0px;
+    font-size: 18px;
+    line-height: 20px;
+}
+.navbar-inverse{
+    background-color: ghostwhite;
+    opacity: 0.9;
+    
+}
+.navbar-nav>li>a>span {
+    color:black;
+}
+.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.open>a:hover {
+    color: #fff;
+    background-color:transparent;
+}
