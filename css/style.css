@@ -1,0 +1,116 @@
+body{
+    background-color:white;
+    
+    
+}
+
+.container{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin: auto;
+    width: 1150px;
+   height: 700px;
+    background-image: url(../images/manga.jpg);
+    border-radius: 20px;
+}
+
+.naruto{
+    width: 150px;
+    height: 150px;
+   
+    position: fixed;
+    
+    left: 1%;
+    animation-name: naruto;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    
+    animation-play-state: running;
+    
+
+}
+.sasuke{
+    width: 150px;
+    height: 150px;
+   
+    position: fixed;
+    top: 900px;
+    left: 1%;
+    animation-name: naruto;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    
+    animation-delay: 2s;
+    
+
+}
+.sakura{
+    width: 150px;
+    height: 150px;
+   
+    position: fixed;
+    top: 900px;
+    left: 1%;
+    animation-name: naruto;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    
+    animation-delay: 4s;
+    
+
+}
+.jiraya{
+    width: 150px;
+    height: 150px;
+   
+    position: fixed;
+    top: 900px;
+    left: 1%;
+    animation-name: naruto;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    
+    animation-delay: 6s;
+    
+
+}
+.kakashi{
+    width: 150px;
+    height: 150px;
+   
+    position: fixed;
+    top: 900px;
+    left: 1%;
+    animation-name: naruto;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    
+    animation-delay: 8s;
+    }
+    .goku{
+        width: 150px;
+        height: 150px;
+       
+        position: fixed;
+        top: 900px;
+        left: 1%;
+        animation-name: naruto;
+        animation-duration: 12s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        
+        animation-delay: 10s;
+        
+    
+    }
+@keyframes naruto {
+    0% {top: 900px;}
+    
+    100% {top:-150px;}
+    
+  }
