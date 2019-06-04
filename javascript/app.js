@@ -35,6 +35,7 @@ $(".add").on("click", function(){
 
 $(document).on("click",".button", function(){
     hero=$(this).attr("id");
+   
    getGifs(hero);
 });
 
@@ -44,7 +45,7 @@ $(document).on("click",".button", function(){
 
 function getGifs(anime){
     
-   
+    $(".myclass").css("background-image","url(images/manga-.jpg)");
     $(".show-gif").empty();
     $(".myclass").css("height","fit-content");
       var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
@@ -61,6 +62,7 @@ function getGifs(anime){
             for(i=0;i<result.length;i++){
                 var img=$("<img>");
                 img.attr("class","image")
+                // img.attr("data-still";)
                 img.attr("src",result[i].images.fixed_height.url);
                 
                 $(".show-gif").append(img);

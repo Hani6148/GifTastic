@@ -3,16 +3,31 @@ body{
     
     
 }
+.show-button{
+    width: fit-content;
+    margin: auto;
+}
+.button{
+    padding: 8px;
+    font-weight: bolder;
+    margin-left: 5px;
+    opacity: 0.95;
+    border-radius: 20px;
+    border: 0px;
+    width:fit-content;
+    margin-bottom: 10px;
+}
 
 .myclass{
+    z-index: 1;
     margin-top: 0px;
     margin-bottom: 0px;
     margin: auto;
     height: 600px;
-
+    
     width: 1150px;
-   
-    background-image: url(../images/manga.jpg);
+    
+    background-image: url(../images/manga-.jpg);
     border-radius: 20px;
 }
 
@@ -238,6 +253,9 @@ body{
     margin-top: 10px;
 }
 .image{
-    width: 383.33px;
+    width: 350px;
     height: 200px;
+    border-radius: 20px;
+    margin-left: 25px;
+    margin-bottom: 25px;
 }
