@@ -27,7 +27,7 @@ body{
     
     width: 1150px;
     
-    background-image: url(../images/manga-.jpg);
+    background-image: url(../images/manga.jpg);
     border-radius: 20px;
 }
 
@@ -258,4 +258,8 @@ body{
     border-radius: 20px;
     margin-left: 25px;
     margin-bottom: 25px;
+    
+}
+.image:hover{
+    cursor: pointer;
 }

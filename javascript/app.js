@@ -13,19 +13,33 @@ var firebaseConfig = {
   firebase.initializeApp(firebaseConfig);
   var database = firebase.database();
   
-
-
-for(i=0;i<per.length;i++){
-   var button=$("<button>");
-   button.attr("class","button");
-   button.attr("id",per[i]);
-   button.text(per[i]);
-   $(".show-button").append(button);
+  value= database.ref();
+  value.once("value").then(function(snapshot){
+     data=snapshot.val().per;
+    console.log(data);
+    for(i=0;i<data.length;i++){
+      var button=$("<button>");
+      button.attr("class","button");
+      button.attr("id",data[i]);
+      button.text(data[i]);
+      $(".show-button").append(button);
+      
    
+   }
 
-}
+  })
+  
+
+
+ 
+
 $(".add").on("click", function(){
     hero=$("#car-name").val();
+    per.push(hero);
+    console.log(per);
+    database.ref().set({
+      per:per
+    })
     button=$("<button>");
     button.attr("class","button");
     button.attr("id",hero);
@@ -61,8 +75,11 @@ function getGifs(anime){
               var result = response.data;
             for(i=0;i<result.length;i++){
                 var img=$("<img>");
-                img.attr("class","image")
-                // img.attr("data-still";)
+                img.attr("class","image");
+                img.attr("data-still",result[i].images.fixed_height_still.url);
+                img.attr("data-animate",result[i].images.fixed_height.url);
+                img.attr("data-state","animate")
+
                 img.attr("src",result[i].images.fixed_height.url);
                 
                 $(".show-gif").append(img);
@@ -71,3 +88,17 @@ function getGifs(anime){
 });
 
 }
+
+
+$(document).on("click",".image", function(){
+    
+    var state = $(this).attr("data-state");
+    
+    if (state === "still") {
+      $(this).attr("src", $(this).attr("data-animate"));
+      $(this).attr("data-state", "animate");
+    } else {
+      $(this).attr("src", $(this).attr("data-still"));
+      $(this).attr("data-state", "still");
+    }
+  });
