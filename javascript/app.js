@@ -35,10 +35,10 @@ var firebaseConfig = {
 
 $(".add").on("click", function(){
     hero=$("#car-name").val();
-    per.push(hero);
+    data.push(hero);
     console.log(per);
     database.ref().set({
-      per:per
+      per:data
     })
     button=$("<button>");
     button.attr("class","button");
