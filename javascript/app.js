@@ -34,7 +34,9 @@ var firebaseConfig = {
  
 
 $(".add").on("click", function(){
-    hero=$("#car-name").val();
+  
+    hero=$("#car-name").val().trim();
+    if(hero!==""){
     data.push(hero);
     console.log(per);
     database.ref().set({
@@ -45,6 +47,7 @@ $(".add").on("click", function(){
     button.attr("id",hero);
     button.text(hero);
     $(".show-button").append(button);
+  }
     });
 
 $(document).on("click",".button", function(){
@@ -63,7 +66,7 @@ function getGifs(anime){
     $(".show-gif").empty();
     $(".myclass").css("height","fit-content");
       var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
-        anime + "&api_key=uCYePs8WdVrhXcBsT6l9R6o9Z50aOXg7&limit=12";
+        anime + "&api_key=uCYePs8WdVrhXcBsT6l9R6o9Z50aOXg7&limit=12&tag=mangas";
 
         $.ajax({
             url: queryURL,
